@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Man } from 'ang-project-test/src/man';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'ang-project-first';
+export class AppComponent implements OnInit {
+    constructor(private man: Man) {
+    }
+
+    title = 'ang-project-first';
+
+    ngOnInit() {
+        this.man.getName();
+    }
 }
