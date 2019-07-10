@@ -7,16 +7,15 @@ import { Man } from 'ang-project-test/src/man';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-    constructor(
-        private man: Man
-    ) {
+    constructor(private man: Man) {
     }
 
     title = 'ang-project-first';
+    name = null;
 
     ngOnInit() {
-        debugger
-        const b = this.man.getName();
-        console.log(b);
+        debugger;
+        this.name = this.man.getName();
+        console.log(this.name);
     }
 }
